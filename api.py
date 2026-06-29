@@ -12,13 +12,21 @@ HEADERS = {
     "x-rapidapi-key": API_KEY
 }
 
-LIGA_URUGUAY = 201  #Confirmar el ID real????
+LIGA_URUGUAY = 268  # ID Primera division - Apertura
 
 def _get(endpoint, params=None):
     url = f"{BASE_URL}/{endpoint}"
     response = requests.get(url, headers=HEADERS, params=params)
     response.raise_for_status()
     return response.json()["response"]
+
+
+for liga in _get("leagues", {"country": "Uruguay"}):
+    nombre = liga["league"]["name"]
+    id_liga = liga["league"]["id"]
+    temporadas = [s["year"] for s in liga["seasons"]]
+    print(f"{id_liga} - {nombre} - Temporadas disponibles: {temporadas} ")
+
 
 def get_fixtures(season=2026, league=LIGA_URUGUAY):
     return _get("fixtures", {"league": league, "season": season})
