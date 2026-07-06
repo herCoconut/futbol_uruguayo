@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv("API_FOOTBALL_KEY")
-BASE_URL = "https://v3.football.api-sports.io"
+BASE_URL = "https://v3.football.api-sports.io"      # https://dashboard.api-football.com/ web del dasboard
 
 HEADERS = {
     "x-rapidapi-host": "v3.football.api-sports.io",
