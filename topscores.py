@@ -1,4 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import 
+from api import get_topscorers
+
+(topscorers, ) = get_topscorers()
+print(topscorers)
+

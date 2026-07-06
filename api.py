@@ -21,7 +21,7 @@ def _get(endpoint, params=None):
     return response.json()["response"]
 
 
-for liga in _get("leagues", {"country": "Uruguay"}):
+#for liga in _get("leagues", {"country": "Uruguay"}):
     nombre = liga["league"]["name"]
     id_liga = liga["league"]["id"]
     temporadas = [s["year"] for s in liga["seasons"]]
