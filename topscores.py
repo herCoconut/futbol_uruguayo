@@ -5,7 +5,7 @@ from api import get_topscorers
 
 
 def main():
-    for season in (2026, 2025, 2024):
+    for season in (2026, 2025, 2024, 2023, 2022, 2021, 2020):
         topscorers = get_topscorers(season=season)
         if topscorers:
             print(f"Temporada {season}:")
@@ -15,7 +15,7 @@ def main():
                 team_name = scorer["statistics"][0]["team"]["name"]
                 goals = scorer["statistics"][0]["goals"]["total"]
                 print(f"{player_name} - {team_name} - Goles: {goals}")
-            break
+            print("\n")
     else:
         print("No se encontraron datos de máximos goleadores.")
 
