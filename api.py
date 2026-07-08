@@ -21,21 +21,21 @@ def _get(endpoint, params=None):
     return response.json()["response"]
 
 
-for liga in _get("leagues", {"country": "Uruguay"}):
+# for liga in _get("leagues", {"country": "Uruguay"}):
     nombre = liga["league"]["name"]
     id_liga = liga["league"]["id"]
     temporadas = [s["year"] for s in liga["seasons"]]
     print(f"{id_liga} - {nombre} - Temporadas disponibles: {temporadas} ")
 
 
-def get_fixtures(season=2026, league=LIGA_URUGUAY):
+def get_fixtures(season=2024, league=LIGA_URUGUAY):
     return _get("fixtures", {"league": league, "season": season})
 
-def get_standings(season=2026, league=LIGA_URUGUAY):
+def get_standings(season=2024, league=LIGA_URUGUAY):
     return _get("standings", {"league": league, "season": season})
 
-def get_topscorers(season=2026, league=LIGA_URUGUAY):
+def get_topscorers(season=2024, league=LIGA_URUGUAY):
     return _get("players/topscorers", {"league": league, "season": season})
 
-def get_team_stats(team_id, season=2026, league=LIGA_URUGUAY):
+def get_team_stats(team_id, season=2024, league=LIGA_URUGUAY):
     return _get("teams/statistics", {"league": league, "season": season, "team": team_id})
