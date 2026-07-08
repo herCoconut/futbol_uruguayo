@@ -45,7 +45,9 @@ def main():
             plt.ylabel('Goles')
             plt.title(f'Máximos Goleadores Temporada {season}')
             plt.xticks(rotation=45)
-            plt.savefig(f'Maximos_Goleadores_{season}.png')
+            plt.grid()
+            plt.tight_layout()
+            plt.savefig(f'Imagenes/Maximos_Goleadores_{season}.png')
 
     else:
         print("No se encontraron datos de máximos goleadores.")
