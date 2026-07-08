@@ -6,3 +6,4 @@ Analisis de medio local
 - ```api.py```
 - ```topscores.py```
 - ```team_stats.py```
+- ```standings.py```
