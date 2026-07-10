@@ -1,9 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import os
-import json
-import time
 from api import get_standings
 
 
