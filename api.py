@@ -59,9 +59,6 @@ def _get(endpoint, params=None, cache_ttl=3600, force=False):
 
     return resp
 
-for season in range(2000, 2026):
-    print(f'Temporadas disponibles: {season} - {get_standings(season=season, cache_ttl=3600, force=False)}')
-
 # Ejemplos de llamadas con caché centralizada
 def get_fixtures(season=2024, league=LIGA_URUGUAY, cache_ttl=3600, force=False):
     return _get("fixtures", {"league": league, "season": season}, cache_ttl=cache_ttl, force=force)
@@ -77,3 +74,7 @@ def get_topscorers(season=2024, league=LIGA_URUGUAY, cache_ttl=3600, force=False
 
 def get_team_stats(team_id, season=2024, league=LIGA_URUGUAY, cache_ttl=3600, force=False):
     return _get("teams/statistics", {"league": league, "season": season, "team": team_id}, cache_ttl=cache_ttl, force=force)
+
+for season in range(2000, 2026):
+    print(f'\033[103mTemporadas disponibles: \033[0m{season} - {get_standings(season=season, cache_ttl=3600, force=False)}\033[0m')
+# Temporadas disponibles: 2022, 2023 y 2024.
