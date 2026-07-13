@@ -28,22 +28,22 @@ def ranking(season=2024, league=None, cache_ttl=3600, force=False):
     print(f"\033[103mSe muestra los nombres de los equipos: \033[0m{df['team_name'].tolist()}")
 
     colores_equipos = {
-        "Penarol": "#FFC040",
-        "Nacional": "#FFFFFF",
-        "Defensor sporting": "#A000A0",
-        "Boston River": "#11E91C",
-        "Progreso": "#FF0000",
-        "Cerro Largo": "#0000AA",
-        "Racing Montevideo": "#00AA00",
-        "Liverpool Montevideo": "#0000FF",
-        "Wanderers": "#111111",
-        "Cerro": "#44BBFF",
-        "Deportivo Maldonado": "#",
-        "Rampla Juniors": "#",
-        "CA River Plate": "#",
-        "Danubio": "#",
-        "Fenix": "#",
-        "Miramar": "#",
+        "Penarol": "#fdca01",
+        "Nacional": "#f80020",
+        "Defensor sporting": "#450090",
+        "Boston River": "#1f5428",
+        "Progreso": "#de0204",
+        "Cerro Largo": "#2b29d2",
+        "Racing Montevideo": "#1c6823",
+        "Liverpool Montevideo": "#003399",
+        "Wanderers": "#1d120e",
+        "Cerro": "#0193de",
+        "Deportivo Maldonado": "#d00000",
+        "Rampla Juniors": "#009a3e",
+        "CA River Plate": "#c01b24",
+        "Danubio": "#171613",
+        "Fenix": "#6e3178",
+        "Miramar": "#e5060b",
     }
 
 

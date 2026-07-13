@@ -59,6 +59,8 @@ def _get(endpoint, params=None, cache_ttl=3600, force=False):
 
     return resp
 
+for season in range(2000, 2026):
+    print(f'Temporadas disponibles: {season} - {get_standings(season=season, cache_ttl=3600, force=False)}')
 
 # Ejemplos de llamadas con caché centralizada
 def get_fixtures(season=2024, league=LIGA_URUGUAY, cache_ttl=3600, force=False):
